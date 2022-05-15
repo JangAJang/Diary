@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>일기 리스트</title>
+    <style>
+        .layout{
+            position:absolute;
+            left: 50%;
+            transform: translate(-50%);
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+<div class="layout">
+    <table border="1">
+        <caption>나의 일기장</caption>
+        <tr>
+            <th>번호</th>
+            <th>제목</th>
+        </tr>
+        <tr th:each="diary : ${list}">
+            <td th:text="${diary.id}">1</td>
+            <td th:text="${diary.title}">제목입니다</td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>

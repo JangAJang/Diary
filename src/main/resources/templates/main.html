@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <title>메인 화면</title>
+        <style>
+            a{
+                font-size: 32px;
+            }
+            .logo{
+                position: absolute;
+                left: 50%;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="logo">
+            <p><a th:href="@{/write}" >C</a>reate</p>
+            <p><a th:href="@{/list}">R</a>ead</p>
+            <p><a href="">U</a>pdate</p>
+            <p><a href="">D</a>elete</p>
+        </div>
+    </body>
+</html>
