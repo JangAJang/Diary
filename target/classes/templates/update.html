@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>일기 작성</title>
+    <style>
+        .layout{
+            position:absolute;
+            left: 50%;
+            transform: translate(-50%);
+        }
+
+        .title{
+            width: 500px;
+            height: 32px;
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+        .content{
+            width: 500px;
+            height: 500px;
+            margin-bottom: 15px;
+        }
+        button{
+            background-color: burlywood;
+            width: 100px;
+            margin-left: 40%;
+        }
+    </style>
+</head>
+<body>
+<div class="layout">
+    <form action="/writePro" method="post">
+        <input class="title" name="title" type="text">
+        <textarea class="content" name="content" ></textarea>
+        <button type="submit">저장</button>
+    </form>
+</div>
+</body>
+</html>

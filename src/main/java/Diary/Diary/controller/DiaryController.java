@@ -37,5 +37,11 @@ public class DiaryController {
         return "list";
     }
 
+    @GetMapping("/view")
+    public String diaryView(Model model, Integer id){
+        model.addAttribute("diary", diaryService.diaryView(id));
+        return "view";
+    }
+
 
 }

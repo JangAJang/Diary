@@ -18,4 +18,8 @@ public class DiaryService {
     public List<Diary> list(){
         return diaryRepository.findAll();
     }
+
+    public Diary diaryView(Integer id){
+        return diaryRepository.findById(id).get();
+    }
 }
