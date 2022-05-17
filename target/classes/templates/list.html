@@ -21,9 +21,11 @@
         </tr>
         <tr th:each="diary : ${list}">
             <td th:text="${diary.id}">1</td>
-            <td><a th:text="${diary.title}" th:href="@{/view(id=${diary.id})}">제목입니다</a></td>
+            <td><a th:text="${diary.title}" th:href="@{/view/{id}(id=${diary.id})}">제목입니다</a></td>
         </tr>
     </table>
+    <button type="button" th:onclick="|location.href='@{/}'|">메인으로</button>
+    <button type="button" th:onclick="|location.href='@{/write}'|">글 쓰기</button>
 </div>
 </body>
 </html>

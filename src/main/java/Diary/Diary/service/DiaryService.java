@@ -22,4 +22,8 @@ public class DiaryService {
     public Diary diaryView(Integer id){
         return diaryRepository.findById(id).get();
     }
+
+    public void delete(Integer id){
+        diaryRepository.deleteById(id);
+    }
 }

@@ -15,8 +15,10 @@
 <div class="layout">
     <h1 th:text="${diary.title}">제목입니다</h1>
     <p th:text="${diary.content}">내용입니다</p>
-    <button>글 삭제</button>
-    <button>글 수정</button>
+    <button type="button" th:onclick="|location.href='@{/}'|">메인으로</button>
+    <button type="button" th:onclick="|location.href='@{/list}'|">리스트로</button>
+    <button type="button" th:onclick="|location.href='@{/delete(id=${diary.id})}'|">글 삭제</button>
+    <button type="button" th:onclick="|location.href='@{/update/{id}(id=${diary.id})}'|">글 수정</button>
 </div>
 </body>
 </html>

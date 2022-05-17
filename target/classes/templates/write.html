@@ -22,7 +22,6 @@
             margin-bottom: 15px;
         }
         button{
-            background-color: burlywood;
             width: 100px;
             margin-left: 40%;
         }
@@ -34,6 +33,7 @@
         <input class="title" name="title" type="text">
         <textarea class="content" name="content" ></textarea>
         <button type="submit">저장</button>
+        <button type="button" th:onclick="|location.href='@{/}'|">메인으로</button>
     </form>
 </div>
 </body>
