@@ -1,5 +1,6 @@
 package Diary.Diary.entity;
 
+import lombok.Builder;
 import lombok.Data;
 import lombok.Generated;
 
@@ -10,6 +11,7 @@ import javax.persistence.Id;
 
 @Entity
 @Data
+@Builder
 public class Diary {
 
     @Id
@@ -17,4 +19,13 @@ public class Diary {
     private Integer id;
     private String title;
     private String content;
+
+    public Diary() {}
+
+    public Diary makeDiary(String title, String content){
+        return Diary.builder()
+                .title(title)
+                .content(content)
+                .build();
+    }
 }

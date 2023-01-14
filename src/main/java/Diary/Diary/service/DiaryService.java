@@ -11,6 +11,7 @@ import java.util.List;
 public class DiaryService {
     @Autowired
     private DiaryRepository diaryRepository;
+
     public void write(Diary diary){
         diaryRepository.save(diary);
     }
